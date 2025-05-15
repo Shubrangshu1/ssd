@@ -88,16 +88,20 @@ export default function HomePage() {
             </CardTitle>
             <CardDescription>{MANDIR_ADDRESS}</CardDescription>
           </CardHeader>
-          <CardContent>
-            <Link href="/information#location" aria-label="View map and directions">
+          <CardContent> {/* Default padding from CardContent will apply */}
+            <Link href="/information#location" aria-label="View map and directions" className="block relative group overflow-hidden rounded-md shadow-md">
               <Image
-                src="https://placehold.co/600x400.png?text=Mandir+Map+View"
+                src="https://placehold.co/600x400.png"
                 alt="Mandir Location Map"
                 width={600}
                 height={400}
-                className="rounded-md object-cover aspect-video cursor-pointer hover:opacity-90 transition-opacity"
-                data-ai-hint="map temple"
+                className="object-cover aspect-video w-full rounded-md group-hover:scale-105 transition-transform duration-300 ease-in-out"
+                data-ai-hint="temple aerial" 
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col items-center justify-end p-4">
+                <MapPin className="h-8 w-8 text-white mb-1 drop-shadow-lg" />
+                <span className="text-white font-semibold text-md text-center drop-shadow-lg">View Map & Directions</span>
+              </div>
             </Link>
           </CardContent>
            <CardFooter>
@@ -202,4 +206,3 @@ const InfoIcon = (props: React.SVGProps<SVGSVGElement>) => (
 // I've updated them to use the directly imported lucide-react icons: Sprout and Wrench.
 // If Sprout or Wrench were not available, I would have kept the inline SVGs.
 // For this case, they are available, so the inline definitions are no longer needed here.
-
