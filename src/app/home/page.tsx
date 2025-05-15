@@ -16,7 +16,7 @@ export default function HomePage() {
         </p>
         <div className="flex justify-center gap-4">
           <Button asChild size="lg">
-            <Link href="/donations/thakur-bhog"> {/* Updated to a specific donation type or /donations for general */}
+            <Link href="/donations/thakur-bhog">
               <HeartHandshake className="mr-2 h-5 w-5" /> Offer Seva
             </Link>
           </Button>
@@ -39,7 +39,7 @@ export default function HomePage() {
           <CardContent className="text-center space-y-4">
             <div className="my-4">
               <Image
-                src="https://placehold.co/800x300.png" // Replace with your actual banner path e.g., /krupa_sarjanee_banner.png
+                src="https://placehold.co/800x300.png" 
                 alt="Krupa-Sarjanee Mahotsav Banner"
                 width={800}
                 height={300}
@@ -82,8 +82,8 @@ export default function HomePage() {
           </CardContent>
            <CardFooter>
              <Button variant="link" asChild className="text-primary p-0">
-                <Link href="/announcements">View All Announcements <ArrowRight className="ml-1 h-4 w-4" /></Link> {/* Link to a potential future announcements page */}
-            </Button>
+               <Link href="/announcements">View All Announcements <ArrowRight className="ml-1 h-4 w-4" /></Link>
+             </Button>
           </CardFooter>
         </Card>
 
@@ -97,7 +97,7 @@ export default function HomePage() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-3">
-              {IMPORTANT_DATES_EVENTS.slice(0,2).map(event => ( // Show 2 events to make space for announcements
+              {IMPORTANT_DATES_EVENTS.slice(0,2).map(event => (
                 <li key={event.id} className="pb-3 border-b border-border last:border-b-0">
                   <h4 className="font-semibold">{event.title}</h4>
                   <p className="text-sm text-muted-foreground">{event.date}</p>
