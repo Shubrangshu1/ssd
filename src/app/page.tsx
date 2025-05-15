@@ -3,9 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { CalendarDays, Clock, MapPin, Youtube, Facebook, Link as LinkIcon, Instagram, Send, Users, HeartHandshake, ArrowRight, Landmark, Sprout, Wrench } from 'lucide-react';
-import { APP_NAME, MANDIR_NAME, MANDIR_ADDRESS, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, PRAYER_TIMINGS } from '@/lib/constants';
+import { CalendarDays, Clock, MapPin, Youtube, Facebook, Link as LinkIcon, Instagram, Send, Users, HeartHandshake, ArrowRight, Landmark, Sprout, Wrench, Info } from 'lucide-react';
+import { MANDIR_NAME, MANDIR_ADDRESS, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, PRAYER_TIMINGS } from '@/lib/constants';
 
 export default function HomePage() {
   return (
@@ -23,7 +22,7 @@ export default function HomePage() {
           </Button>
           <Button asChild variant="outline" size="lg">
             <Link href="/information">
-              <InfoIcon className="mr-2 h-5 w-5" /> View Information
+              <Info className="mr-2 h-5 w-5" /> View Information
             </Link>
           </Button>
         </div>
@@ -39,12 +38,12 @@ export default function HomePage() {
           <CardContent className="text-center space-y-4">
             <div className="my-4">
               <Image
-                src="https://placehold.co/800x300.png" 
+                src="https://placehold.co/800x300.png"
                 alt="Krupa-Sarjanee Mahotsav Banner"
                 width={800}
                 height={300}
                 className="object-cover w-full max-w-2xl rounded-md shadow-lg mx-auto border-2 border-primary/50"
-                data-ai-hint="festival banner religious celebration"
+                data-ai-hint="Krupa Sarjanee"
               />
             </div>
             <div>
@@ -119,7 +118,7 @@ export default function HomePage() {
             </CardTitle>
             <CardDescription>{MANDIR_ADDRESS}</CardDescription>
           </CardHeader>
-          <CardContent> {/* Default padding from CardContent will apply */}
+          <CardContent>
             <Link href="/information#location" aria-label="View map and directions" className="block relative group overflow-hidden rounded-md shadow-md">
               <Image
                 src="https://placehold.co/600x400.png"
@@ -127,7 +126,7 @@ export default function HomePage() {
                 width={600}
                 height={400}
                 className="object-cover aspect-video w-full rounded-md group-hover:scale-105 transition-transform duration-300 ease-in-out"
-                data-ai-hint="temple aerial" 
+                data-ai-hint="temple aerial"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col items-center justify-end p-4">
                 <MapPin className="h-8 w-8 text-white mb-1 drop-shadow-lg" />
@@ -167,7 +166,7 @@ export default function HomePage() {
             ))}
           </CardContent>
         </Card>
-        
+
         <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-primary/10 to-accent/10">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-primary">
@@ -208,7 +207,7 @@ export default function HomePage() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg"><Wrench className="h-5 w-5 text-primary"/>Maintenance Contribution</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent> {/* Corrected from CarcContent */}
                   <p className="text-sm text-muted-foreground">Contribute towards the upkeep and development of our Mandir.</p>
                 </CardContent>
                 <CardFooter>
@@ -223,12 +222,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-// Lucide icons that might not be directly available:
-const InfoIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <circle cx="12" cy="12" r="10" />
-    <line x1="12" y1="16" x2="12" y2="12" />
-    <line x1="12" y1="8" x2="12.01" y2="8" />
-  </svg>
-);
