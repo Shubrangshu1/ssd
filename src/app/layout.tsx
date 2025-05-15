@@ -3,7 +3,7 @@ import { Inter as Geist } from 'next/font/google'; // Using Inter as Geist, can 
 import { Geist_Mono } from 'next/font/google'; // Assuming Geist_Mono is available or similar mono
 import './globals.css';
 import { AuthProvider } from '@/contexts/AuthContext';
-import Navbar from '@/components/layout/Navbar';
+// import Navbar from '@/components/layout/Navbar'; // Navbar removed
 import Footer from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import { APP_NAME, APP_DESCRIPTION } from '@/lib/constants';
@@ -40,7 +40,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`} suppressHydrationWarning={true}>
         <AuthProvider>
           <div className="flex min-h-screen flex-col">
-            <Navbar />
+            {/* <Navbar /> */} {/* Navbar component removed */}
             <main className="flex-grow"> {/* Removed container and padding, pages will handle their own layout */}
               {children}
             </main>
