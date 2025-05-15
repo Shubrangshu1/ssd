@@ -3,14 +3,14 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { CalendarDays, Clock, MapPin, Youtube, Facebook, Link as LinkIcon, Instagram, Send, Users, HeartHandshake, ArrowRight, Landmark } from 'lucide-react';
+import { CalendarDays, Clock, MapPin, Youtube, Facebook, Link as LinkIcon, Instagram, Send, Users, HeartHandshake, ArrowRight, Landmark, Sprout, Wrench } from 'lucide-react';
 import { APP_NAME, MANDIR_NAME, MANDIR_ADDRESS, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, PRAYER_TIMINGS } from '@/lib/constants';
 
 export default function HomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-primary mb-2">Welcome to {APP_NAME}</h1>
+        <h1 className="text-4xl font-bold text-primary mb-2">Satsang Vihar Hyderabad</h1>
         <p className="text-xl text-muted-foreground mb-6">
           Your companion for devotion and service at {MANDIR_NAME}.
         </p>
@@ -145,7 +145,7 @@ export default function HomePage() {
             <Link href="/donations/satsang-sponsorship" className="block">
               <Card className="h-full hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg"><SproutIcon className="h-5 w-5 text-primary"/>Sponsor Next Satsang</CardTitle>
+                  <CardTitle className="flex items-center gap-2 text-lg"><Sprout className="h-5 w-5 text-primary"/>Sponsor Next Satsang</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">Be a yajman for an upcoming satsang and receive blessings.</p>
@@ -171,7 +171,7 @@ export default function HomePage() {
             <Link href="/donations/maintenance" className="block">
               <Card className="h-full hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg"><WrenchIcon className="h-5 w-5 text-primary"/>Maintenance Contribution</CardTitle>
+                  <CardTitle className="flex items-center gap-2 text-lg"><Wrench className="h-5 w-5 text-primary"/>Maintenance Contribution</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">Contribute towards the upkeep and development of our Mandir.</p>
@@ -198,26 +198,8 @@ const InfoIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const SproutIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M7 20h10" />
-    <path d="M10 20c5.5-2.5.8-6.4 3-10" />
-    <path d="M9.5 9.4c1.1.8 1.8 2.2 1.5 3.6C10.6 14.4 9 15 8 15A2.5 2.5 0 0 0 5.5 13c0-1.4.9-2.6 2.1-3.1" />
-    <path d="M14.5 9.4c-1.1.8-1.8 2.2-1.5 3.6.3 1.4 1.9 2.8 2.9 2.8A2.5 2.5 0 0 0 18.5 13c0-1.4-.9-2.6-2.1-3.1" />
-    <path d="M12 2a2.5 2.5 0 0 1 2.5 2.5c0 .9-.5 1.7-1.2 2.2" />
-    <path d="M12 2A2.5 2.5 0 0 0 9.5 4.5C9.5 5.4 10 6.2 10.7 6.7" />
-    <path d="M12 22s-3.25-1.33-4-4" />
-    <path d="M12 22s3.25-1.33 4-4" />
-  </svg>
-);
-
-const WrenchIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.4 1.4a1 1 0 0 0 1.4 0l3.5-3.5a1 1 0 0 0 0-1.4l-1.4-1.4a1 1 0 0 0-1.4 0L14.7 6.3z"/>
-        <path d="M9.6 12.9A5 5 0 0 1 5.8 17l-2.2 2.2a1.2 1.2 0 0 0 0 1.7l.9.9a1.2 1.2 0 0 0 1.7 0l2.2-2.2c.9-.9 1.5-2.1 1.6-3.3"/>
-        <path d="m18.8 3.5-1.2 1.2"/>
-        <path d="M10 11l-5.5 5.5"/>
-        <path d="M13 8l5.5-5.5"/>
-    </svg>
-);
+// SproutIcon and WrenchIcon were previously defined using inline SVGs.
+// I've updated them to use the directly imported lucide-react icons: Sprout and Wrench.
+// If Sprout or Wrench were not available, I would have kept the inline SVGs.
+// For this case, they are available, so the inline definitions are no longer needed here.
 
