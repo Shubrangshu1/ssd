@@ -3,78 +3,83 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 0 0% 100%; /* White */
+    --foreground: 20 14.3% 4.1%; /* Dark Brown/Black for text */
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 20 14.3% 4.1%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 30 100% 60%; /* Saffron #FF9933 */
+    --primary-foreground: 30 80% 15%; /* Dark Brown for text on Saffron */
+    --secondary: 30 100% 95%; /* Very light Saffron for subtle backgrounds */
+    --secondary-foreground: 30 80% 40%; /* Darker Saffron for text on light Saffron */
+    --muted: 0 0% 96.1%; /* Light gray for muted text/elements */
+    --muted-foreground: 0 0% 45.1%; /* Medium gray for muted text */
+    --accent: 51 100% 50%; /* Gold #FFD700 */
+    --accent-foreground: 51 100% 10%; /* Dark Brown for text on Gold */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --border: 30 30% 88%; /* Light Saffron/Orange border */
+    --input: 30 30% 94%; /* Light Saffron/Orange input background */
+    --ring: 30 100% 60%; /* Saffron for focus rings */
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --chart-1: 30 100% 60%;
+    --chart-2: 51 100% 50%;
+    --chart-3: 20 80% 50%;
+    --chart-4: 40 90% 55%;
+    --chart-5: 15 70% 65%;
+
+    --sidebar-background: 30 100% 98%; /* Very Light Saffron */
+    --sidebar-foreground: 20 14.3% 20%; /* Dark text */
+    --sidebar-primary: 30 100% 60%; /* Saffron */
+    --sidebar-primary-foreground: 30 80% 15%; /* Dark text on Saffron */
+    --sidebar-accent: 30 100% 90%; /* Lighter Saffron */
+    --sidebar-accent-foreground: 30 80% 30%; /* Darker Saffron text */
+    --sidebar-border: 30 30% 85%;
+    --sidebar-ring: 30 100% 60%;
   }
+
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 20 14.3% 10%; /* Dark Brown */
+    --foreground: 0 0% 95%; /* Light text */
+    --card: 20 14.3% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 20 14.3% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 30 100% 60%; /* Saffron */
+    --primary-foreground: 30 80% 15%; /* Dark text on Saffron */
+    --secondary: 30 100% 20%; /* Dark Saffron shade */
+    --secondary-foreground: 30 100% 85%; /* Lighter Saffron text */
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 51 100% 50%; /* Gold */
+    --accent-foreground: 51 100% 10%; /* Dark text on Gold */
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 30 100% 30%; /* Darker Saffron border */
+    --input: 30 100% 25%; /* Dark Saffron input background */
+    --ring: 30 100% 60%; /* Saffron for focus rings */
+
+    --chart-1: 30 100% 70%;
+    --chart-2: 51 100% 60%;
+    --chart-3: 20 80% 60%;
+    --chart-4: 40 90% 65%;
+    --chart-5: 15 70% 75%;
+
+    --sidebar-background: 20 14.3% 12%; /* Darker Brown */
+    --sidebar-foreground: 0 0% 90%; /* Light text */
+    --sidebar-primary: 30 100% 60%; /* Saffron */
+    --sidebar-primary-foreground: 30 80% 15%; /* Dark text on Saffron */
+    --sidebar-accent: 30 100% 25%; /* Dark Saffron */
+    --sidebar-accent-foreground: 30 100% 80%; /* Lighter Saffron text */
+    --sidebar-border: 30 100% 30%;
+    --sidebar-ring: 30 100% 60%;
   }
 }
 
