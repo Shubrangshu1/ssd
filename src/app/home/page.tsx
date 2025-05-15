@@ -55,6 +55,7 @@ export default function HomePage() {
                 height={300}
                 className="object-cover w-full max-w-2xl rounded-md shadow-lg mx-auto border-2 border-primary/50"
                 data-ai-hint="Krupa Sarjanee festival"
+                priority
               />
             </div>
             <div>
@@ -167,6 +168,7 @@ export default function HomePage() {
                 height={400}
                 className="object-cover aspect-video w-full rounded-md group-hover:scale-105 transition-transform duration-300 ease-in-out"
                 data-ai-hint="temple aerial map"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col items-center justify-end p-4">
                 <MapPin className="h-8 w-8 text-white mb-1 drop-shadow-lg" />
