@@ -20,17 +20,17 @@ export default function HomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-primary mb-2">{APP_NAME}</h1>
-        <p className="text-xl text-muted-foreground mb-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-primary mb-2">{APP_NAME}</h1>
+        <p className="text-lg md:text-xl text-muted-foreground mb-6">
           Your companion for devotion and service at {MANDIR_NAME}.
         </p>
-        <div className="flex justify-center gap-4">
-          <Button asChild size="lg">
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Button asChild size="lg" className="w-full sm:w-auto">
             <Link href="/donations/thakur-bhog">
               <HeartHandshake className="mr-2 h-5 w-5" /> Offer Seva
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
             <Link href="/information">
               <Info className="mr-2 h-5 w-5" /> View Information
             </Link>
@@ -42,9 +42,9 @@ export default function HomePage() {
         {/* Krupa-Sarjanee Mahotsav Card */}
         <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-accent/20 to-primary/20 p-4 shadow-xl">
           <CardHeader className="text-center pb-2">
-            <p className="text-sm text-primary font-semibold">BY THE BLESSINGS OF PARAM PUJYAPAD SREE SREE ACHARYADEV</p>
-            <CardTitle className="text-4xl font-bold text-primary filter drop-shadow-lg my-2">KRUPA-SARJANEE MAHOTSAV</CardTitle>
-            <CardDescription className="text-lg font-semibold" style={{color: "hsl(var(--primary-foreground))"}}>15<sup>th</sup> Anniversary Celebrations</CardDescription>
+            <p className="text-xs sm:text-sm text-primary font-semibold">BY THE BLESSINGS OF PARAM PUJYAPAD SREE SREE ACHARYADEV</p>
+            <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary filter drop-shadow-lg my-2">KRUPA-SARJANEE MAHOTSAV</CardTitle>
+            <CardDescription className="text-md sm:text-lg font-semibold" style={{color: "hsl(var(--primary-foreground))"}}>15<sup>th</sup> Anniversary Celebrations</CardDescription>
           </CardHeader>
           <CardContent className="text-center space-y-4">
             <div className="my-4">
@@ -58,12 +58,12 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <p className="text-2xl font-bold text-foreground">
-                <CalendarDays className="inline-block mr-2 h-7 w-7 text-primary" />
+              <p className="text-xl md:text-2xl font-bold text-foreground">
+                <CalendarDays className="inline-block mr-2 h-6 w-6 sm:h-7 sm:w-7 text-primary" />
                 7<sup>th</sup> December 2025, Sunday
               </p>
-              <p className="text-xl font-semibold text-muted-foreground mt-2">
-                <MapPin className="inline-block mr-2 h-6 w-6 text-primary" />
+              <p className="text-base md:text-lg lg:text-xl font-semibold text-muted-foreground mt-2">
+                <MapPin className="inline-block mr-2 h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                 AT NTR GROUNDS, OPP. INDIRA PARK, HYDERABAD, TELANGANA
               </p>
             </div>

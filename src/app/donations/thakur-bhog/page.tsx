@@ -10,10 +10,20 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import UpiPayment from '@/components/UpiPayment';
+// import UpiPayment from '@/components/UpiPayment'; // Will be dynamically imported
 import { recordThakurBhog } from '@/lib/actions';
 import { useToast } from '@/hooks/use-toast';
-import { Landmark } from 'lucide-react';
+import { Landmark, Loader2 } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+const UpiPayment = dynamic(() => import('@/components/UpiPayment'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex justify-center items-center p-8">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+  ),
+});
 
 const thakurBhogSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),

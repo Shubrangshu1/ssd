@@ -11,14 +11,24 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import UpiPayment from '@/components/UpiPayment';
+// import UpiPayment from '@/components/UpiPayment'; // Will be dynamically imported
 import { recordSatsangSponsorship } from '@/lib/actions';
 import { useToast } from '@/hooks/use-toast';
-import { Calendar as CalendarIcon, Sprout } from 'lucide-react';
+import { Calendar as CalendarIcon, Sprout, Loader2 } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Calendar } from '@/components/ui/calendar';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
+import dynamic from 'next/dynamic';
+
+const UpiPayment = dynamic(() => import('@/components/UpiPayment'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex justify-center items-center p-8">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+  ),
+});
 
 const sponsorshipSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -202,4 +212,3 @@ export default function SatsangSponsorshipPage() {
     </div>
   );
 }
-

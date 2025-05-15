@@ -10,10 +10,20 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import UpiPayment from '@/components/UpiPayment';
+// import UpiPayment from '@/components/UpiPayment'; // Will be dynamically imported
 import { recordMaintenanceContribution } from '@/lib/actions';
 import { useToast } from '@/hooks/use-toast';
-import { Wrench } from 'lucide-react';
+import { Wrench, Loader2 } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+const UpiPayment = dynamic(() => import('@/components/UpiPayment'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex justify-center items-center p-8">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+  ),
+});
 
 const maintenanceSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -168,4 +178,3 @@ export default function MaintenanceContributionPage() {
     </div>
   );
 }
-

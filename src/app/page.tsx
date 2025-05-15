@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect } from 'react';
@@ -27,8 +28,8 @@ export default function SplashScreenPage() {
         className="mb-8 animate-pulse"
         data-ai-hint="temple logo spiritual"
       />
-      <h1 className="text-3xl font-bold text-primary mb-4">{APP_NAME}</h1>
-      <blockquote className="text-lg text-muted-foreground italic max-w-md">
+      <h1 className="text-2xl md:text-3xl font-bold text-primary mb-4">{APP_NAME}</h1>
+      <blockquote className="text-base md:text-lg text-muted-foreground italic max-w-md">
         <p>“You are for the Lord, not for others. And you are for the Lord, and so for others.”</p>
         <cite className="block text-right mt-2 text-sm not-italic">— Shree Shree Thakur Anukulchandra</cite>
       </blockquote>
