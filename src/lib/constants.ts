@@ -10,11 +10,11 @@ export const MANDIR_ADDRESS = "Dairyfarm junction, 1-1-5/1, Satsang Vihar, Rajen
 export const MANDIR_MAP_EMBED_URL = "https://maps.app.goo.gl/UcVwb6AeEBKS6Vju5";
 
 export const SOCIAL_LINKS = {
-  youtube: "https://youtube.com/satsangviharhyderabad",
-  facebook: "https://facebook.com/satsangviharhyderabad",
-  website: "https://satsangviharhyderabad.org",
-  instagram: "https://instagram.com/satsangviharhyderabad",
-  whatsapp: "https://whatsapp.com/channel/satsangviharupdates",
+  youtube: "https://www.youtube.com/@satsangviharhyderabad",
+  facebook: "https://facebook.com/profile.php?id=61572984027492",
+  website: "https://satsanghyderabad.org/",
+  instagram: "https://instagram.com/satsanghyderabad",
+  whatsapp: "https://whatsapp.com/channel/satsangviharupdates", // Assuming this is a placeholder or a generic link
 };
 
 export const UPI_ID = "satsangviharhyd@upi";
