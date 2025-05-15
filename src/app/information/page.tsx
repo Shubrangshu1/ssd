@@ -61,7 +61,7 @@ export default function InformationPage() {
                 <table className="w-full text-left">
                   <thead className="bg-secondary">
                     <tr>
-                      <th className="p-3 font-semibold">Activity</th>
+                      <th className="p-3 font-semibold">Morning Prayer</th>
                       <th className="p-3 font-semibold">Time</th>
                     </tr>
                   </thead>
