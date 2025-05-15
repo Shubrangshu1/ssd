@@ -1,3 +1,4 @@
+
 import type { NavItem, UpcomingEvent, PrayerTime } from '@/types';
 import { Home, Users, LogIn, HeartHandshake, Sprout, Wrench, Info, CalendarDays, Clock, MapPin, Youtube, Facebook, Instagram, Send, Landmark } from 'lucide-react';
 
@@ -5,7 +6,7 @@ export const APP_NAME = "Satsang Seva";
 export const APP_DESCRIPTION = "Devotional app for Satsang Vihar Hyderabad: Updates, donations, and community connection.";
 
 export const MANDIR_NAME = "Satsang Vihar Hyderabad";
-export const MANDIR_ADDRESS = "123 Devotion Path, Hyderabad, Telangana, India";
+export const MANDIR_ADDRESS = "Dairyfarm junction, 1-1-5/1, Satsang Vihar, Rajendra Nagar Rd, opp. pillar no 216, Hyderabad, Telangana 500030";
 // Updated to the new shareable Google Maps link
 export const MANDIR_MAP_EMBED_URL = "https://maps.app.goo.gl/UcVwb6AeEBKS6Vju5";
 
@@ -61,3 +62,4 @@ export const PRAYER_TIMINGS: PrayerTime[] = [
   { id: "2", name: "Evening Aarti", time: "7:00 PM" },
   { id: "3", name: "Satsang (Sunday)", time: "10:00 AM - 12:00 PM" },
 ];
+
