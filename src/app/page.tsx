@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -29,6 +30,36 @@ export default function HomePage() {
       </section>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-accent/20 to-primary/20 p-4 shadow-xl">
+          <CardHeader className="text-center pb-2">
+            <p className="text-sm text-primary font-semibold">BY THE BLESSINGS OF PARAM PUJYAPAD SREE SREE ACHARYADEV</p>
+            <CardTitle className="text-4xl font-bold text-primary filter drop-shadow-lg my-2">KRUPA-SARJANEE MAHOTSAV</CardTitle>
+            <CardDescription className="text-lg font-semibold" style={{color: "hsl(var(--primary-foreground))"}}>15<sup>th</sup> Anniversary Celebrations</CardDescription>
+          </CardHeader>
+          <CardContent className="text-center space-y-4">
+            <div className="my-4">
+              <Image
+                src="https://placehold.co/800x300.png" 
+                alt="Krupa-Sarjanee Mahotsav Banner"
+                width={800}
+                height={300}
+                className="object-cover w-full max-w-2xl rounded-md shadow-lg mx-auto border-2 border-primary/50"
+                data-ai-hint="festival banner religious celebration"
+              />
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-foreground">
+                <CalendarDays className="inline-block mr-2 h-7 w-7 text-primary" />
+                7<sup>th</sup> December 2025, Sunday
+              </p>
+              <p className="text-xl font-semibold text-muted-foreground mt-2">
+                <MapPin className="inline-block mr-2 h-6 w-6 text-primary" />
+                AT NTR GROUNDS, OPP. INDIRA PARK, HYDERABAD, TELANGANA
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
         <Card className="lg:col-span-1">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -201,8 +232,3 @@ const InfoIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <line x1="12" y1="8" x2="12.01" y2="8" />
   </svg>
 );
-
-// SproutIcon and WrenchIcon were previously defined using inline SVGs.
-// I've updated them to use the directly imported lucide-react icons: Sprout and Wrench.
-// If Sprout or Wrench were not available, I would have kept the inline SVGs.
-// For this case, they are available, so the inline definitions are no longer needed here.
