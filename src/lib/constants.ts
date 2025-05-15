@@ -54,12 +54,12 @@ export const AUTH_NAV_LINKS_USER = (name?: string): NavItem[] => [
 export const IMPORTANT_DATES_EVENTS: UpcomingEvent[] = [
   { id: "1", date: "Next Purnima", title: "Special Satsang & Kirtan", description: "Join us for an evening of devotion." },
   { id: "2", date: "Upcoming Festival", title: "Festival Celebrations", description: "Details to be announced soon." },
-  { id: "3", date: "Every Sunday", title: "Weekly Satsang", description: "Timings: 10 AM - 12 PM" },
+  { id: "3", date: "Every Sunday", title: "Weekly Satsang", description: "Timings: 11 AM - 12:30 PM" },
 ];
 
 export const PRAYER_TIMINGS: PrayerTime[] = [
   { id: "1", name: "Morning Prayer", time: "6:40 AM" },
   { id: "2", name: "Evening Prayer", time: "7:00 PM" },
-  { id: "3", name: "Satsang (Sunday)", time: "10:00 AM - 12:00 PM" },
+  { id: "3", name: "Satsang (Sunday)", time: "11 AM to 12 30 PM" },
 ];
 
