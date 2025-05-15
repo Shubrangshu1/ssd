@@ -91,7 +91,9 @@ export default function HomePage() {
               <Clock className="h-6 w-6 text-primary" />
               Prayer Timings
             </CardTitle>
-            <CardDescription>Daily and weekly prayer schedules.</CardDescription>
+            <CardDescription>
+              🕊️ <strong>“Prayer is the call of the soul towards its source. It awakens the inner self, purifies the heart, and brings man nearer to his Ideal.”</strong> &mdash; Shree Shree Thakur Anukulchandra
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
@@ -207,7 +209,7 @@ export default function HomePage() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg"><Wrench className="h-5 w-5 text-primary"/>Maintenance Contribution</CardTitle>
                 </CardHeader>
-                <CardContent> {/* Corrected from CarcContent */}
+                <CardContent>
                   <p className="text-sm text-muted-foreground">Contribute towards the upkeep and development of our Mandir.</p>
                 </CardContent>
                 <CardFooter>
