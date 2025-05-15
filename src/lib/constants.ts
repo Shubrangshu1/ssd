@@ -2,7 +2,7 @@
 import type { NavItem, UpcomingEvent, PrayerTime } from '@/types';
 import { Home, Users, LogIn, HeartHandshake, Sprout, Wrench, Info, CalendarDays, Clock, MapPin, Youtube, Facebook, Instagram, Send, Landmark } from 'lucide-react';
 
-export const APP_NAME = "Satsang Seva";
+export const APP_NAME = "Satsang Vihar Hyderabad";
 export const APP_DESCRIPTION = "Devotional app for Satsang Vihar Hyderabad: Updates, donations, and community connection.";
 
 export const MANDIR_NAME = "Satsang Vihar Hyderabad";

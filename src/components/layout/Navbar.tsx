@@ -123,6 +123,23 @@ const DesktopNavLinkItem = ({ item }: { item: NavItem }) => {
   );
 };
 
+// Om SVG Icon
+const OmIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    stroke="currentColor"
+    strokeWidth="0.5" // Adjusted for better visual balance with fill
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+    data-ai-hint="om symbol"
+  >
+    <path d="M10.163 4.037c.07-.07.149-.138.233-.203.584-.457 1.39-.734 2.254-.734 1.132 0 2.14.43 2.885 1.175.745.745 1.175 1.753 1.175 2.885 0 .833-.26 1.608-.69 2.227a4.006 4.006 0 0 1-.21.263M5.01 10.613c.31-.913.93-1.717 1.76-2.322m12.387 3.656c.2.628.313 1.285.313 1.966 0 2.485-2.015 4.5-4.5 4.5-1.14 0-2.165-.43-2.923-1.152-.742-.708-1.19-1.698-1.19-2.798 0-1.25.458-2.357 1.212-3.148M9.09 12.194c-2.56 1.866-2.84 5.047-1.414 7.121C9.512 21.54 12.56 22 15 20.292c2.44-1.708 2.7-5.042 1.414-7.122-1.285-2.08-4.177-2.708-6.324-1.976M8.23 16.06c.345.639 1.29.89 2.05.53.76-.36 1.035-1.425.69-2.064s-1.29-.89-2.05-.53c-.76.36-1.035 1.425-.69 2.064z" />
+  </svg>
+);
+
 
 export default function Navbar() {
   const { user, logout, loading } = useAuth();
@@ -130,7 +147,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const getInitials = (name?: string) => {
-    if (!name) return "SS";
+    if (!name) return "SV"; // Updated for Satsang Vihar
     return name.split(' ').map(n => n[0]).join('').toUpperCase();
   };
 
@@ -178,10 +195,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 shrink-0">
-              {/* Culturally relevant icon placeholder, using a simple one for now */}
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8 text-primary" data-ai-hint="mandir logo">
-                <path d="M12 2L1 9l4 1v10h14V10l4-1-11-7zm0 2.618L17.938 9H6.062L12 4.618zM6 11h12v7H6v-7zm1 1v5h3v-5H7zm4 0v5h2v-5h-2zm3 0v5h3v-5h-3z" />
-              </svg>
+              <OmIcon className="h-8 w-8 text-primary" />
               <span className="font-semibold text-xl text-primary">{APP_NAME}</span>
             </Link>
           </div>
@@ -216,9 +230,7 @@ export default function Navbar() {
                 <div className="p-4">
                 <div className="flex items-center justify-between mb-4">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8 text-primary" data-ai-hint="mandir logo">
-                           <path d="M12 2L1 9l4 1v10h14V10l4-1-11-7zm0 2.618L17.938 9H6.062L12 4.618zM6 11h12v7H6v-7zm1 1v5h3v-5H7zm4 0v5h2v-5h-2zm3 0v5h3v-5h-3z" />
-                         </svg>
+                         <OmIcon className="h-8 w-8 text-primary" />
                         <span className="font-semibold text-xl text-primary">{APP_NAME}</span>
                     </Link>
                     <SheetClose asChild>
@@ -253,3 +265,4 @@ export default function Navbar() {
     </header>
   );
 }
+
