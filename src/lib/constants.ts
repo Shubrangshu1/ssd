@@ -59,7 +59,7 @@ export const IMPORTANT_DATES_EVENTS: UpcomingEvent[] = [
 
 export const PRAYER_TIMINGS: PrayerTime[] = [
   { id: "1", name: "Morning Prayer", time: "6:40 AM" },
-  { id: "2", name: "Evening Aarti", time: "7:00 PM" },
+  { id: "2", name: "Evening Prayer", time: "7:00 PM" },
   { id: "3", name: "Satsang (Sunday)", time: "10:00 AM - 12:00 PM" },
 ];
 
