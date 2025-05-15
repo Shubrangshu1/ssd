@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useForm, type SubmitHandler } from 'react-hook-form';
@@ -11,7 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { useAuth } from '@/hooks/useAuth';
 import { useToast } from '@/hooks/use-toast';
 import { updateUserProfile } from '@/lib/actions';
-import { UserCircle } from 'lucide-react';
+import { UserCircle, ShieldCheck } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const profileSchema = z.object({
@@ -24,13 +23,12 @@ const profileSchema = z.object({
 type ProfileFormData = z.infer<typeof profileSchema>;
 
 export default function ProfilePage() {
-  const { user, loading: authLoading, login } = useAuth(); // Using login to update client-side user state
+  const { user, loading: authLoading, login } = useAuth();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<ProfileFormData>({
     resolver: zodResolver(profileSchema),
-    // Default values will be set by useEffect once user data is available
   });
 
   useEffect(() => {
@@ -48,29 +46,26 @@ export default function ProfilePage() {
     if (!user) return;
     setIsSubmitting(true);
     try {
-      // Filter out empty optional fields before sending
       const updateData: Partial<ProfileFormData> = {};
-      if (data.name) updateData.name = data.name;
-      if (data.email) updateData.email = data.email;
-      if (data.phone) updateData.phone = data.phone;
-      if (data.age) updateData.age = data.age;
+      if (data.name && data.name !== user.name) updateData.name = data.name;
+      if (data.email && data.email !== user.email) updateData.email = data.email;
+      if (data.phone && data.phone !== user.phone) updateData.phone = data.phone;
+      if (data.age && data.age !== user.age) updateData.age = data.age;
+      
+      if (Object.keys(updateData).length === 0) {
+        toast({ title: "No Changes", description: "No information was changed." });
+        setIsSubmitting(false);
+        return;
+      }
       
       const result = await updateUserProfile(user.id, updateData);
       if (result.success) {
         toast({ title: "Profile Updated", description: "Your profile has been successfully updated." });
-        // Update local auth context user (simulated, ideally response would return updated user)
         const updatedUser = { ...user, ...updateData };
-        // This is a simplified way to update. AuthProvider might need a dedicated updateUser function.
         localStorage.setItem('currentUser', JSON.stringify(updatedUser)); 
-        // Trigger a re-render or state update in AuthContext if it has such a function.
-        // For now, using login as a hacky way to refresh, or just rely on next navigation to reflect.
-        // A proper solution would be an `updateUserInContext` function in AuthContext.
-        // login(user.role as any, updatedUser); // This isn't ideal, just for simulation.
-         if (user.role === 'volunteer' || user.role === 'worker') {
+        if (user.role === 'volunteer' || user.role === 'worker' || user.role === 'admin' || user.role === 'pending_worker') {
             await login(user.role, updatedUser);
         }
-
-
       } else {
         toast({ title: "Update Failed", description: result.message || "Could not update profile.", variant: "destructive" });
       }
@@ -82,15 +77,15 @@ export default function ProfilePage() {
   };
 
   if (authLoading) {
-    return <p>Loading profile...</p>;
+    return <p className="p-4 text-center">Loading profile...</p>;
   }
 
   if (!user) {
-    return <p>Please log in to view your profile.</p>; // Should be handled by layout
+    return <p className="p-4 text-center">Please log in to view your profile.</p>;
   }
   
-  const canEditEmail = user.role !== 'worker'; // Workers might use phone as primary ID
-  const canEditPhone = user.role !== 'volunteer'; // Volunteers might use email as primary ID
+  const canEditEmail = user.role !== 'worker';
+  const canEditPhone = user.role !== 'volunteer';
 
   return (
     <Card className="max-w-2xl mx-auto shadow-lg">
@@ -99,7 +94,7 @@ export default function ProfilePage() {
           <UserCircle className="mr-2 h-7 w-7" />
           Your Profile
         </CardTitle>
-        <CardDescription>View and update your personal information.</CardDescription>
+        <CardDescription>View and update your personal information. Your current role is <span className="font-semibold capitalize text-primary">{user.role?.replace('_', ' ')}</span>.</CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -145,7 +140,7 @@ export default function ProfilePage() {
                 </FormItem>
               )}
             />
-            {user.role === 'volunteer' && (
+            {(user.role === 'volunteer' || user.role === 'admin') && ( // Allow admin to edit age for example
                <FormField
                 control={form.control}
                 name="age"
