@@ -1,18 +1,31 @@
 
+"use client";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { CalendarDays, Clock, MapPin, Youtube, Facebook, Link as LinkIcon, Instagram, Send, Info } from 'lucide-react';
-import { APP_NAME, MANDIR_NAME, MANDIR_ADDRESS, MANDIR_MAP_EMBED_URL, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, PRAYER_TIMINGS } from '@/lib/constants';
+import { APP_NAME, MANDIR_NAME, MANDIR_ADDRESS, MANDIR_MAP_EMBED_URL, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, getDynamicPrayerTimes, PRAYER_TIMINGS_DEFAULT } from '@/lib/constants';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import type { PrayerTime } from '@/types';
 
-export const metadata: Metadata = {
-  title: 'Mandir Information',
-  description: `Find all important information about ${MANDIR_NAME}, including events, timings, location, and contact details.`,
-};
+// export const metadata: Metadata = { // Metadata should be defined statically or fetched in a server component
+//   title: 'Mandir Information',
+//   description: `Find all important information about ${MANDIR_NAME}, including events, timings, location, and contact details.`,
+// };
 
 export default function InformationPage() {
+  const [prayerTimesList, setPrayerTimesList] = useState<PrayerTime[]>(PRAYER_TIMINGS_DEFAULT);
+
+  useEffect(() => {
+    // Ensure metadata is handled if this page becomes fully client-rendered for dynamic parts
+    // For now, title can be set in layout or a parent server component if needed.
+    document.title = `Mandir Information | ${APP_NAME}`;
+    setPrayerTimesList(getDynamicPrayerTimes());
+  }, []);
+
   return (
     <div className="container mx-auto px-4 py-8">
       <header className="mb-12 text-center">
@@ -53,20 +66,20 @@ export default function InformationPage() {
               <Clock className="h-7 w-7 text-primary mr-3" />
               Prayer & Satsang Timings
             </CardTitle>
-            <CardDescription>Regular schedule for daily prayers and weekly satsangs.</CardDescription>
+            <CardDescription>Regular schedule for daily prayers and weekly satsangs. Timings displayed are for the current month.</CardDescription>
           </CardHeader>
           <CardContent>
-            {PRAYER_TIMINGS.length > 0 ? (
+            {prayerTimesList.length > 0 ? (
               <div className="overflow-x-auto">
                 <table className="w-full text-left">
                   <thead className="bg-secondary">
                     <tr>
-                      <th className="p-3 font-semibold">Morning Prayer</th>
+                      <th className="p-3 font-semibold">Activity</th>
                       <th className="p-3 font-semibold">Time</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {PRAYER_TIMINGS.map(prayer => (
+                    {prayerTimesList.map(prayer => (
                       <tr key={prayer.id} className="border-b border-border last:border-0">
                         <td className="p-3">{prayer.name}</td>
                         <td className="p-3 font-medium">{prayer.time}</td>

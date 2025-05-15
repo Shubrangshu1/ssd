@@ -1,12 +1,22 @@
 
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { CalendarDays, Clock, MapPin, Youtube, Facebook, Link as LinkIcon, Instagram, Send, Users, HeartHandshake, ArrowRight, Landmark, Sprout, Wrench, Info, Megaphone } from 'lucide-react';
-import { MANDIR_NAME, MANDIR_ADDRESS, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, PRAYER_TIMINGS, APP_NAME } from '@/lib/constants';
+import { MANDIR_NAME, MANDIR_ADDRESS, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, APP_NAME, getDynamicPrayerTimes, PRAYER_TIMINGS_DEFAULT } from '@/lib/constants';
+import type { PrayerTime } from '@/types';
+import { useEffect, useState } from 'react';
 
 export default function HomePage() {
+  const [prayerTimes, setPrayerTimes] = useState<PrayerTime[]>(PRAYER_TIMINGS_DEFAULT);
+
+  useEffect(() => {
+    setPrayerTimes(getDynamicPrayerTimes());
+  }, []);
+
   return (
     <div className="container mx-auto px-4 py-8">
       <section className="text-center mb-12">
@@ -125,7 +135,7 @@ export default function HomePage() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
-              {PRAYER_TIMINGS.map(prayer => (
+              {prayerTimes.map(prayer => (
                 <li key={prayer.id} className="flex justify-between">
                   <span>{prayer.name}</span>
                   <span className="font-medium">{prayer.time}</span>
