@@ -13,7 +13,7 @@ export const SOCIAL_LINKS = {
   youtube: "https://www.youtube.com/@satsangviharhyderabad",
   facebook: "https://facebook.com/profile.php?id=61572984027492",
   website: "https://satsanghyderabad.org/",
-  instagram: "https://instagram.com/satsanghyderabad",
+  instagram: "https://www.instagram.com/satsangviharhyderabad?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   whatsapp: "https://whatsapp.com/channel/satsangviharupdates", // Assuming this is a placeholder or a generic link
 };
 
