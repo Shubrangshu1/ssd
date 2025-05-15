@@ -19,7 +19,7 @@ export default function HomePage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <section className="text-center mb-12">
+      <section className="text-center mb-12 animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out">
         <h1 className="text-3xl md:text-4xl font-bold text-primary mb-2">{APP_NAME}</h1>
         <p className="text-lg md:text-xl text-muted-foreground mb-6">
           Your companion for devotion and service at {MANDIR_NAME}.
@@ -40,7 +40,7 @@ export default function HomePage() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Krupa-Sarjanee Mahotsav Card */}
-        <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-accent/20 to-primary/20 p-4 shadow-xl">
+        <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-accent/20 to-primary/20 p-4 shadow-xl animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-100">
           <CardHeader className="text-center pb-2">
             <p className="text-xs sm:text-sm text-primary font-semibold">BY THE BLESSINGS OF PARAM PUJYAPAD SREE SREE ACHARYADEV</p>
             <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary filter drop-shadow-lg my-2">KRUPA-SARJANEE MAHOTSAV</CardTitle>
@@ -71,7 +71,7 @@ export default function HomePage() {
         </Card>
 
         {/* Important Announcements Placeholder Card */}
-        <Card className="lg:col-span-1">
+        <Card className="lg:col-span-1 animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-200">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Megaphone className="h-6 w-6 text-primary" />
@@ -97,7 +97,7 @@ export default function HomePage() {
           </CardFooter>
         </Card>
 
-        <Card className="lg:col-span-1">
+        <Card className="lg:col-span-1 animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-300">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <CalendarDays className="h-6 w-6 text-primary" />
@@ -123,7 +123,7 @@ export default function HomePage() {
           </CardFooter>
         </Card>
 
-        <Card>
+        <Card className="animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-400">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Clock className="h-6 w-6 text-primary" />
@@ -150,7 +150,7 @@ export default function HomePage() {
           </CardFooter>
         </Card>
 
-        <Card>
+        <Card className="animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <MapPin className="h-6 w-6 text-primary" />
@@ -181,7 +181,7 @@ export default function HomePage() {
           </CardFooter>
         </Card>
 
-        <Card className="md:col-span-2 lg:col-span-3">
+        <Card className="md:col-span-2 lg:col-span-3 animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-600">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Users className="h-6 w-6 text-primary" />
@@ -207,7 +207,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-primary/10 to-accent/10">
+        <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-primary/10 to-accent/10 animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-700">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-primary">
               <HeartHandshake className="h-7 w-7" />
@@ -217,7 +217,7 @@ export default function HomePage() {
           </CardHeader>
           <CardContent className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             <Link href="/donations/satsang-sponsorship" className="block">
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full hover:shadow-lg transition-shadow hover:scale-[1.02]">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg"><Sprout className="h-5 w-5 text-primary"/>Sponsor Next Satsang</CardTitle>
                 </CardHeader>
@@ -230,7 +230,7 @@ export default function HomePage() {
               </Card>
             </Link>
             <Link href="/donations/thakur-bhog" className="block">
-               <Card className="h-full hover:shadow-lg transition-shadow">
+               <Card className="h-full hover:shadow-lg transition-shadow hover:scale-[1.02]">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg"><Landmark className="h-5 w-5 text-primary"/>Offer Thakur Bhog</CardTitle>
                 </CardHeader>
@@ -243,7 +243,7 @@ export default function HomePage() {
               </Card>
             </Link>
             <Link href="/donations/maintenance" className="block">
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full hover:shadow-lg transition-shadow hover:scale-[1.02]">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg"><Wrench className="h-5 w-5 text-primary"/>Maintenance Contribution</CardTitle>
                 </CardHeader>

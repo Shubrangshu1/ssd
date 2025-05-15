@@ -27,14 +27,15 @@ export default function SplashScreenPage() {
         height={150}
         className="mb-8 animate-pulse"
         data-ai-hint="temple logo spiritual"
+        priority // Added priority for LCP
       />
-      <h1 className="text-2xl md:text-3xl font-bold text-primary mb-4">{APP_NAME}</h1>
-      <blockquote className="text-base md:text-lg text-muted-foreground italic max-w-md">
+      <h1 className="text-2xl md:text-3xl font-bold text-primary mb-4 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-200">{APP_NAME}</h1>
+      <blockquote className="text-base md:text-lg text-muted-foreground italic max-w-md animate-in fade-in slide-in-from-bottom-5 duration-700 delay-400">
         <p>“You are for the Lord, not for others. And you are for the Lord, and so for others.”</p>
         <cite className="block text-right mt-2 text-sm not-italic">— Shree Shree Thakur Anukulchandra</cite>
       </blockquote>
-      <Loader2 className="h-8 w-8 animate-spin text-primary mt-10" />
-      <p className="text-sm text-muted-foreground mt-2">Loading...</p>
+      <Loader2 className="h-8 w-8 animate-spin text-primary mt-10 animate-in fade-in duration-700 delay-600" />
+      <p className="text-sm text-muted-foreground mt-2 animate-in fade-in duration-700 delay-600">Loading...</p>
     </div>
   );
 }
