@@ -6,8 +6,8 @@ export const APP_DESCRIPTION = "Devotional app for Satsang Vihar Hyderabad: Upda
 
 export const MANDIR_NAME = "Satsang Vihar Hyderabad";
 export const MANDIR_ADDRESS = "123 Devotion Path, Hyderabad, Telangana, India";
-// Replace with actual Google Maps embed URL or coordinates
-export const MANDIR_MAP_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.080000000000!2d78.47000000000000!3d17.40000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDI0JzAwLjAiTiA3OMKwMjgnMTIuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin";
+// Updated to the new shareable Google Maps link
+export const MANDIR_MAP_EMBED_URL = "https://maps.app.goo.gl/UcVwb6AeEBKS6Vju5";
 
 export const SOCIAL_LINKS = {
   youtube: "https://youtube.com/satsangviharhyderabad",

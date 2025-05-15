@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import { CalendarDays, Clock, MapPin, Youtube, Facebook, Link as LinkIcon, Instagram, Send, Info } from 'lucide-react';
 import { APP_NAME, MANDIR_NAME, MANDIR_ADDRESS, MANDIR_MAP_EMBED_URL, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, PRAYER_TIMINGS } from '@/lib/constants';
 import type { Metadata } from 'next';
@@ -89,22 +90,24 @@ export default function InformationPage() {
             <CardDescription>{MANDIR_ADDRESS}</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="aspect-video w-full overflow-hidden rounded-lg border">
-              <iframe
-                src={MANDIR_MAP_EMBED_URL}
-                width="100%"
-                height="100%"
-                style={{ border:0 }}
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={`Map of ${MANDIR_NAME}`}
-                aria-label={`Map showing location of ${MANDIR_NAME}`}
-                data-ai-hint="temple location map"
-              ></iframe>
+            <div className="aspect-video w-full overflow-hidden rounded-lg border relative bg-muted/20 flex items-center justify-center">
+              <Image
+                src="https://placehold.co/600x400.png"
+                alt={`Map preview for ${MANDIR_NAME}`}
+                width={600}
+                height={400}
+                className="object-cover opacity-30"
+                data-ai-hint="map preview"
+              />
+              <Button asChild size="lg" className="absolute">
+                <Link href={MANDIR_MAP_EMBED_URL} target="_blank" rel="noopener noreferrer">
+                  <MapPin className="mr-2 h-5 w-5" />
+                  Open Map
+                </Link>
+              </Button>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
-              For detailed directions, you can search for "{MANDIR_NAME}" on Google Maps or your preferred navigation app.
+              Click the button above to open the location in Google Maps. For detailed directions, you can also search for "{MANDIR_NAME}" on your preferred navigation app.
             </p>
           </CardContent>
         </Card>
