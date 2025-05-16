@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -39,13 +39,29 @@ const sponsorshipSchema = z.object({
 
 type SponsorshipFormData = z.infer<typeof sponsorshipSchema>;
 
+const BOOKED_DATES_STORAGE_KEY = 'bookedSponsorshipDates';
+
 export default function SatsangSponsorshipPage() {
   const [showUpiPayment, setShowUpiPayment] = useState(false);
   const [donationAmount, setDonationAmount] = useState(0);
   const [transactionId, setTransactionId] = useState("");
   const [formData, setFormData] = useState<SponsorshipFormData | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [bookedDates, setBookedDates] = useState<string[]>([]);
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Load booked dates from localStorage on component mount
+    const storedBookedDates = localStorage.getItem(BOOKED_DATES_STORAGE_KEY);
+    if (storedBookedDates) {
+      try {
+        setBookedDates(JSON.parse(storedBookedDates));
+      } catch (error) {
+        console.error("Failed to parse booked dates from localStorage", error);
+        localStorage.removeItem(BOOKED_DATES_STORAGE_KEY); // Clear corrupted data
+      }
+    }
+  }, []);
 
   const form = useForm<SponsorshipFormData>({
     resolver: zodResolver(sponsorshipSchema),
@@ -66,10 +82,19 @@ export default function SatsangSponsorshipPage() {
     if (!formData) return;
     setIsSubmitting(true);
     try {
-      const submissionData = { ...formData, date: formData.date.toISOString().split('T')[0], transactionId: txnId };
+      const dateString = formData.date.toISOString().split('T')[0];
+      const submissionData = { ...formData, date: dateString, transactionId: txnId };
+      
       const result = await recordSatsangSponsorship(submissionData);
-      if (result.success) {
+
+      if (result.success && result.bookedDate) {
         toast({ title: "Success!", description: "Your satsang sponsorship has been recorded. Thank you for your Seva!" });
+        
+        // Update localStorage for booked dates
+        const updatedBookedDates = [...bookedDates, result.bookedDate];
+        localStorage.setItem(BOOKED_DATES_STORAGE_KEY, JSON.stringify(updatedBookedDates));
+        setBookedDates(updatedBookedDates);
+
         form.reset();
         setShowUpiPayment(false);
         setTransactionId("");
@@ -84,6 +109,14 @@ export default function SatsangSponsorshipPage() {
     }
   };
 
+  const isDateDisabled = (date: Date): boolean => {
+    if (date < new Date(new Date().setDate(new Date().getDate() -1))) { // Disable past dates
+      return true;
+    }
+    const dateString = date.toISOString().split('T')[0];
+    return bookedDates.includes(dateString);
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <Card className="max-w-2xl mx-auto shadow-lg">
@@ -93,7 +126,7 @@ export default function SatsangSponsorshipPage() {
             Sponsor Next Satsang
           </CardTitle>
           <CardDescription>
-            Offer your Seva by sponsoring an upcoming satsang. Your contribution supports the arrangements and prasad.
+            Offer your Seva by sponsoring an upcoming satsang. Your contribution supports the arrangements and prasad. Dates already booked will be disabled.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -144,9 +177,7 @@ export default function SatsangSponsorshipPage() {
                             mode="single"
                             selected={field.value}
                             onSelect={field.onChange}
-                            disabled={(date) =>
-                              date < new Date(new Date().setDate(new Date().getDate() -1)) // Disable past dates
-                            }
+                            disabled={isDateDisabled}
                             initialFocus
                           />
                         </PopoverContent>
@@ -212,3 +243,4 @@ export default function SatsangSponsorshipPage() {
     </div>
   );
 }
+

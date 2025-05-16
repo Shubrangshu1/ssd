@@ -21,8 +21,12 @@ export async function recordThakurBhog(data: FormData) {
   return simulateDatabaseOperation("Thakur Bhog Donation", data);
 }
 
-export async function recordSatsangSponsorship(data: FormData) {
-  return simulateDatabaseOperation("Satsang Sponsorship", data);
+export async function recordSatsangSponsorship(data: FormData & { date: string }) {
+  // Simulate database operation
+  console.log(`Simulating Satsang Sponsorship with data:`, data);
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  // In a real app, you'd save this to a database and confirm the date isn't already taken server-side.
+  return { success: true, message: "Satsang Sponsorship data recorded successfully.", bookedDate: data.date };
 }
 
 export async function recordMaintenanceContribution(data: FormData) {
@@ -41,3 +45,4 @@ export async function updateUserProfile(userId: string, data: Partial<FormData>)
   await new Promise(resolve => setTimeout(resolve, 1000));
   return { success: true, message: "Profile updated successfully." };
 }
+
