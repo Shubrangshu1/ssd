@@ -1,0 +1,60 @@
+{
+  "node": {
+    "4015f10634f9094e2f42caa64046d612d0b056ebd6": {
+      "workers": {
+        "app/donations/maintenance/page": {
+          "moduleId": "[project]/.next-internal/server/app/donations/maintenance/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/donations/maintenance/page": "action-browser"
+      }
+    },
+    "403290b08190f502670f7dd8f1908f4dbbf1a8a49a": {
+      "workers": {
+        "app/donations/maintenance/page": {
+          "moduleId": "[project]/.next-internal/server/app/donations/maintenance/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/donations/maintenance/page": "action-browser"
+      }
+    },
+    "405a5646b684157f12cfd3a886c63b5410f767293f": {
+      "workers": {
+        "app/donations/maintenance/page": {
+          "moduleId": "[project]/.next-internal/server/app/donations/maintenance/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/donations/maintenance/page": "action-browser"
+      }
+    },
+    "40a95bf5419bd0979482e36a565bc58fc51765239c": {
+      "workers": {
+        "app/donations/maintenance/page": {
+          "moduleId": "[project]/.next-internal/server/app/donations/maintenance/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/donations/maintenance/page": "action-browser"
+      }
+    },
+    "609b57ae844440eab33f2238f4584a778c0b98b0fc": {
+      "workers": {
+        "app/donations/maintenance/page": {
+          "moduleId": "[project]/.next-internal/server/app/donations/maintenance/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/donations/maintenance/page": "action-browser"
+      }
+    }
+  },
+  "edge": {}
+}

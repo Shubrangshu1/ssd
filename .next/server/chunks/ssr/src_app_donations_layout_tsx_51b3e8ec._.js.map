@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/user/studio/src/app/donations/layout.tsx"],"sourcesContent":["\nimport type { Metadata } from 'next';\nimport { HeartHandshake } from 'lucide-react';\n\nexport const metadata: Metadata = {\n  title: 'Donations & Seva',\n  description: 'Offer your Seva through various donation options to support Satsang Vihar Hyderabad.',\n};\n\nexport default function DonationsLayout({\n  children,\n}: {\n  children: React.ReactNode\n}) {\n  return (\n    <section className=\"py-8\">\n      {/* You can add a common header or breadcrumbs for donation pages here if needed */}\n      {/* For example:\n      <div className=\"container mx-auto px-4 mb-6\">\n        <h1 className=\"text-3xl font-bold text-primary flex items-center\">\n          <HeartHandshake className=\"mr-3 h-8 w-8\" />\n          Offer Your Seva\n        </h1>\n      </div>\n      */}\n      {children}\n    </section>\n  )\n}\n"],"names":[],"mappings":";;;;;;AAIO,MAAM,WAAqB;IAChC,OAAO;IACP,aAAa;AACf;AAEe,SAAS,gBAAgB,EACtC,QAAQ,EAGT;IACC,qBACE,8OAAC;QAAQ,WAAU;kBAUhB;;;;;;AAGP","debugId":null}}]
+}
