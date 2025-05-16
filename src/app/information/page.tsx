@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { CalendarDays, Clock, MapPin, Youtube, Facebook, Link as LinkIcon, Instagram, Send, Info } from 'lucide-react';
 import { APP_NAME, MANDIR_NAME, MANDIR_ADDRESS, MANDIR_MAP_EMBED_URL, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, getDynamicPrayerTimes, PRAYER_TIMINGS_DEFAULT } from '@/lib/constants';
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next'; // Metadata should be defined statically or fetched in a server component
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import type { PrayerTime } from '@/types';
@@ -111,6 +111,7 @@ export default function InformationPage() {
                 height={400}
                 className="object-cover opacity-30"
                 data-ai-hint="map preview"
+                priority 
               />
               <Button asChild size="lg" className="absolute">
                 <Link href={MANDIR_MAP_EMBED_URL} target="_blank" rel="noopener noreferrer">
