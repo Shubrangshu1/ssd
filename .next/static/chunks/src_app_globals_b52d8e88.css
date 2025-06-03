@@ -806,6 +806,10 @@ body {
   min-height: 0;
 }
 
+.min-h-\[280px\] {
+  min-height: 280px;
+}
+
 .min-h-\[80px\] {
   min-height: 80px;
 }
@@ -820,10 +824,6 @@ body {
 
 .min-h-svh {
   min-height: 100svh;
-}
-
-.min-h-\[280px\] {
-  min-height: 280px;
 }
 
 .w-0 {
