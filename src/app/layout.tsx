@@ -3,7 +3,7 @@ import { Inter as Geist } from 'next/font/google'; // Using Inter as Geist, can 
 import { Geist_Mono } from 'next/font/google'; // Assuming Geist_Mono is available or similar mono
 import './globals.css';
 import { AuthProvider } from '@/contexts/AuthContext';
-import Navbar from '@/components/layout/Navbar'; // Navbar restored
+import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import { APP_NAME, APP_DESCRIPTION } from '@/lib/constants';
@@ -36,12 +36,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`} suppressHydrationWarning={true}>
         <AuthProvider>
           <div className="flex min-h-screen flex-col">
-            <Navbar /> {/* Navbar component restored */}
-            <main className="flex-grow"> {/* Removed container and padding, pages will handle their own layout */}
+            <Navbar />
+            <main className="flex-grow">
               {children}
             </main>
             <Footer />

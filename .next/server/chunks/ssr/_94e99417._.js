@@ -103,6 +103,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/send.js [app-ssr] (ecmascript) <export default as Send>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$info$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Info$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/info.js [app-ssr] (ecmascript) <export default as Info>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/constants.ts [app-ssr] (ecmascript)");
+// import type { Metadata } from 'next'; // Metadata should be defined statically or fetched in a server component
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 "use client";
@@ -438,7 +439,8 @@ function InformationPage() {
                                                 width: 600,
                                                 height: 400,
                                                 className: "object-cover opacity-30",
-                                                "data-ai-hint": "map preview"
+                                                "data-ai-hint": "map preview",
+                                                priority: true
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/information/page.tsx",
                                                 lineNumber: 107,
@@ -457,19 +459,19 @@ function InformationPage() {
                                                             className: "mr-2 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/information/page.tsx",
-                                                            lineNumber: 117,
+                                                            lineNumber: 118,
                                                             columnNumber: 19
                                                         }, this),
                                                         "Open Map"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/information/page.tsx",
-                                                    lineNumber: 116,
+                                                    lineNumber: 117,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/information/page.tsx",
-                                                lineNumber: 115,
+                                                lineNumber: 116,
                                                 columnNumber: 15
                                             }, this)
                                         ]
@@ -487,7 +489,7 @@ function InformationPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/information/page.tsx",
-                                        lineNumber: 122,
+                                        lineNumber: 123,
                                         columnNumber: 13
                                     }, this)
                                 ]
@@ -515,27 +517,27 @@ function InformationPage() {
                                                 className: "h-7 w-7 text-primary mr-3"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/information/page.tsx",
-                                                lineNumber: 131,
+                                                lineNumber: 132,
                                                 columnNumber: 15
                                             }, this),
                                             "Connect With Us Online"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/information/page.tsx",
-                                        lineNumber: 130,
+                                        lineNumber: 131,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
                                         children: "Follow our social media channels and join our WhatsApp group for the latest updates."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/information/page.tsx",
-                                        lineNumber: 134,
+                                        lineNumber: 135,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/information/page.tsx",
-                                lineNumber: 129,
+                                lineNumber: 130,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -585,7 +587,7 @@ function InformationPage() {
                                                         "data-ai-hint": hint || label.toLowerCase()
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/information/page.tsx",
-                                                        lineNumber: 147,
+                                                        lineNumber: 148,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -595,7 +597,7 @@ function InformationPage() {
                                                                 children: label
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/information/page.tsx",
-                                                                lineNumber: 149,
+                                                                lineNumber: 150,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -603,24 +605,24 @@ function InformationPage() {
                                                                 children: "Follow/Join Us"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/information/page.tsx",
-                                                                lineNumber: 150,
+                                                                lineNumber: 151,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/information/page.tsx",
-                                                        lineNumber: 148,
+                                                        lineNumber: 149,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, label, true, {
                                                 fileName: "[project]/src/app/information/page.tsx",
-                                                lineNumber: 145,
+                                                lineNumber: 146,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/information/page.tsx",
-                                        lineNumber: 137,
+                                        lineNumber: 138,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -628,19 +630,19 @@ function InformationPage() {
                                         children: "Opt-in to our WhatsApp broadcast channel for instant notifications about satsangs, events, and important announcements."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/information/page.tsx",
-                                        lineNumber: 155,
+                                        lineNumber: 156,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/information/page.tsx",
-                                lineNumber: 136,
+                                lineNumber: 137,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/information/page.tsx",
-                        lineNumber: 128,
+                        lineNumber: 129,
                         columnNumber: 9
                     }, this)
                 ]

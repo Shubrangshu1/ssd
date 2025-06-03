@@ -33,7 +33,15 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ recordThakurBhog(data) 
     return simulateDatabaseOperation("Thakur Bhog Donation", data);
 }
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ recordSatsangSponsorship(data) {
-    return simulateDatabaseOperation("Satsang Sponsorship", data);
+    // Simulate database operation
+    console.log(`Simulating Satsang Sponsorship with data:`, data);
+    await new Promise((resolve)=>setTimeout(resolve, 1000));
+    // In a real app, you'd save this to a database and confirm the date isn't already taken server-side.
+    return {
+        success: true,
+        message: "Satsang Sponsorship data recorded successfully.",
+        bookedDate: data.date
+    };
 }
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ recordMaintenanceContribution(data) {
     return simulateDatabaseOperation("Maintenance Contribution", data);
