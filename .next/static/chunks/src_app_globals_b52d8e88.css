@@ -822,6 +822,10 @@ body {
   min-height: 100svh;
 }
 
+.min-h-\[280px\] {
+  min-height: 280px;
+}
+
 .w-0 {
   width: 0;
 }

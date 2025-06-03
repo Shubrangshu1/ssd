@@ -1,3 +1,4 @@
+
 "use client";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -186,6 +187,7 @@ export default function Navbar() {
                 height={32}
                 className="h-8 w-8"
                 data-ai-hint="temple logo om"
+                priority
               />
               <span className="font-semibold text-xl text-primary">{APP_NAME}</span>
             </Link>
@@ -226,6 +228,7 @@ export default function Navbar() {
                             height={32}
                             className="h-8 w-8"
                             data-ai-hint="temple logo om"
+                            priority
                           />
                         <span className="font-semibold text-xl text-primary">{APP_NAME}</span>
                     </Link>

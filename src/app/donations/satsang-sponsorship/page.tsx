@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -16,7 +16,7 @@ import { recordSatsangSponsorship } from '@/lib/actions';
 import { useToast } from '@/hooks/use-toast';
 import { Calendar as CalendarIcon, Sprout, Loader2 } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { Calendar } from '@/components/ui/calendar';
+// import { Calendar } from '@/components/ui/calendar'; // Will be dynamically imported
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
 import dynamic from 'next/dynamic';
@@ -26,6 +26,16 @@ const UpiPayment = dynamic(() => import('@/components/UpiPayment'), {
   loading: () => (
     <div className="flex justify-center items-center p-8">
       <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+  ),
+});
+
+const Calendar = dynamic(() => import('@/components/ui/calendar').then(mod => mod.Calendar), {
+  ssr: false,
+  loading: () => (
+    <div className="flex justify-center items-center p-4 min-h-[280px]">
+      <Loader2 className="h-6 w-6 animate-spin text-primary" />
+      <span className="ml-2">Loading Calendar...</span>
     </div>
   ),
 });
@@ -173,13 +183,15 @@ export default function SatsangSponsorshipPage() {
                           </FormControl>
                         </PopoverTrigger>
                         <PopoverContent className="w-auto p-0" align="start">
-                          <Calendar
-                            mode="single"
-                            selected={field.value}
-                            onSelect={field.onChange}
-                            disabled={isDateDisabled}
-                            initialFocus
-                          />
+                          <Suspense fallback={<div className="flex justify-center items-center p-4 min-h-[280px]"><Loader2 className="h-6 w-6 animate-spin text-primary" /><span className="ml-2">Loading Calendar...</span></div>}>
+                            <Calendar
+                              mode="single"
+                              selected={field.value}
+                              onSelect={field.onChange}
+                              disabled={isDateDisabled}
+                              initialFocus
+                            />
+                          </Suspense>
                         </PopoverContent>
                       </Popover>
                       <FormMessage />
@@ -243,4 +255,3 @@ export default function SatsangSponsorshipPage() {
     </div>
   );
 }
-
