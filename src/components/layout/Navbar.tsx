@@ -25,6 +25,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { cn } from '@/lib/utils';
 import { APP_NAME, NAV_LINKS, AUTH_NAV_LINKS_GUEST, AUTH_NAV_LINKS_USER } from '@/lib/constants';
 import type { NavItem } from '@/types';
+import { ThemeToggleButton } from '@/components/ThemeToggleButton';
 
 const NavLinkItem = ({ item, onClick }: { item: NavItem; onClick?: () => void }) => {
   const pathname = usePathname();
@@ -198,21 +199,28 @@ export default function Navbar() {
               <DesktopNavLinkItem key={item.href + item.label} item={item} />
             ))}
             {!loading && user && user.role !== 'guest' ? (
-               <UserMenu />
+              <>
+                <UserMenu />
+                <ThemeToggleButton />
+              </>
             ) : !loading ? (
-              AUTH_NAV_LINKS_GUEST.map((item) => (
-                <DesktopNavLinkItem key={item.href + item.label} item={item} />
-              ))
-            ) : null}
+              <>
+                {AUTH_NAV_LINKS_GUEST.map((item) => (
+                  <DesktopNavLinkItem key={item.href + item.label} item={item} />
+                ))}
+                <ThemeToggleButton />
+              </>
+            ) : <ThemeToggleButton /> /* Show toggle even when loading or no user */}
           </nav>
 
           <div className="md:hidden flex items-center">
+             <ThemeToggleButton />
             {!loading && user && user.role !== 'guest' ? (
                 <UserMenu /> 
               ) : null }
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className={user && user.role !== 'guest' ? "ml-2" : ""}>
+                <Button variant="ghost" size="icon" className={cn("ml-2", !(user && user.role !== 'guest') && "ml-0")}> {/* Adjust margin if user menu is not present */}
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Open menu</span>
                 </Button>
