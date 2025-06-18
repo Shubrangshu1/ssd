@@ -463,73 +463,73 @@ img, video {
 
 :root {
   --background: 0 0% 100%;
-  --foreground: 20 14.3% 4.1%;
+  --foreground: 210 20% 25%;
   --card: 0 0% 100%;
-  --card-foreground: 20 14.3% 4.1%;
+  --card-foreground: 210 20% 25%;
   --popover: 0 0% 100%;
-  --popover-foreground: 20 14.3% 4.1%;
-  --primary: 30 100% 60%;
-  --primary-foreground: 30 80% 15%;
-  --secondary: 30 100% 95%;
-  --secondary-foreground: 30 80% 40%;
+  --popover-foreground: 210 20% 25%;
+  --primary: 205 100% 65%;
+  --primary-foreground: 210 100% 10%;
+  --secondary: 205 100% 95%;
+  --secondary-foreground: 205 100% 40%;
   --muted: 0 0% 96.1%;
   --muted-foreground: 0 0% 45.1%;
-  --accent: 51 100% 50%;
-  --accent-foreground: 51 100% 10%;
+  --accent: 215 90% 55%;
+  --accent-foreground: 0 0% 100%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --border: 30 30% 88%;
-  --input: 30 30% 94%;
-  --ring: 30 100% 60%;
+  --border: 205 50% 88%;
+  --input: 205 50% 94%;
+  --ring: 205 100% 65%;
   --radius: .5rem;
-  --chart-1: 30 100% 60%;
-  --chart-2: 51 100% 50%;
-  --chart-3: 20 80% 50%;
-  --chart-4: 40 90% 55%;
-  --chart-5: 15 70% 65%;
-  --sidebar-background: 30 100% 98%;
-  --sidebar-foreground: 20 14.3% 20%;
-  --sidebar-primary: 30 100% 60%;
-  --sidebar-primary-foreground: 30 80% 15%;
-  --sidebar-accent: 30 100% 90%;
-  --sidebar-accent-foreground: 30 80% 30%;
-  --sidebar-border: 30 30% 85%;
-  --sidebar-ring: 30 100% 60%;
+  --chart-1: 205 100% 65%;
+  --chart-2: 215 90% 55%;
+  --chart-3: 200 80% 70%;
+  --chart-4: 220 100% 60%;
+  --chart-5: 210 70% 75%;
+  --sidebar-background: 205 100% 98%;
+  --sidebar-foreground: 210 20% 25%;
+  --sidebar-primary: 205 100% 65%;
+  --sidebar-primary-foreground: 210 100% 10%;
+  --sidebar-accent: 205 100% 90%;
+  --sidebar-accent-foreground: 205 100% 30%;
+  --sidebar-border: 205 50% 85%;
+  --sidebar-ring: 205 100% 65%;
 }
 
 .dark {
-  --background: 20 14.3% 10%;
-  --foreground: 0 0% 95%;
-  --card: 20 14.3% 12%;
-  --card-foreground: 0 0% 95%;
-  --popover: 20 14.3% 10%;
-  --popover-foreground: 0 0% 95%;
-  --primary: 30 100% 60%;
-  --primary-foreground: 30 80% 15%;
-  --secondary: 30 100% 20%;
-  --secondary-foreground: 30 100% 85%;
-  --muted: 0 0% 20%;
-  --muted-foreground: 0 0% 65%;
-  --accent: 51 100% 50%;
-  --accent-foreground: 51 100% 10%;
-  --destructive: 0 70% 40%;
+  --background: 210 30% 10%;
+  --foreground: 205 100% 95%;
+  --card: 210 30% 12%;
+  --card-foreground: 205 100% 95%;
+  --popover: 210 30% 10%;
+  --popover-foreground: 205 100% 95%;
+  --primary: 205 90% 60%;
+  --primary-foreground: 210 100% 15%;
+  --secondary: 210 30% 20%;
+  --secondary-foreground: 205 90% 85%;
+  --muted: 210 30% 15%;
+  --muted-foreground: 205 50% 65%;
+  --accent: 215 80% 50%;
+  --accent-foreground: 205 100% 95%;
+  --destructive: 0 70% 50%;
   --destructive-foreground: 0 0% 95%;
-  --border: 30 100% 30%;
-  --input: 30 100% 25%;
-  --ring: 30 100% 60%;
-  --chart-1: 30 100% 70%;
-  --chart-2: 51 100% 60%;
-  --chart-3: 20 80% 60%;
-  --chart-4: 40 90% 65%;
-  --chart-5: 15 70% 75%;
-  --sidebar-background: 20 14.3% 12%;
-  --sidebar-foreground: 0 0% 90%;
-  --sidebar-primary: 30 100% 60%;
-  --sidebar-primary-foreground: 30 80% 15%;
-  --sidebar-accent: 30 100% 25%;
-  --sidebar-accent-foreground: 30 100% 80%;
-  --sidebar-border: 30 100% 30%;
-  --sidebar-ring: 30 100% 60%;
+  --border: 210 30% 30%;
+  --input: 210 30% 25%;
+  --ring: 205 90% 60%;
+  --chart-1: 205 90% 70%;
+  --chart-2: 215 80% 60%;
+  --chart-3: 200 70% 70%;
+  --chart-4: 220 90% 65%;
+  --chart-5: 210 60% 75%;
+  --sidebar-background: 210 30% 12%;
+  --sidebar-foreground: 205 100% 90%;
+  --sidebar-primary: 205 90% 60%;
+  --sidebar-primary-foreground: 210 100% 15%;
+  --sidebar-accent: 210 30% 25%;
+  --sidebar-accent-foreground: 205 90% 80%;
+  --sidebar-border: 210 30% 30%;
+  --sidebar-ring: 205 90% 60%;
 }
 
 * {
@@ -777,6 +777,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.ml-0 {
+  margin-left: 0;
+}
+
 .ml-1 {
   margin-left: .25rem;
 }
@@ -839,10 +843,6 @@ body {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.ml-0 {
-  margin-left: 0;
 }
 
 .block {

@@ -9,77 +9,94 @@ body {
 @layer base {
   :root {
     --background: 0 0% 100%; /* White */
-    --foreground: 20 14.3% 4.1%; /* Dark Brown/Black for text */
-    --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
-    --primary: 30 100% 60%; /* Saffron #FF9933 */
-    --primary-foreground: 30 80% 15%; /* Dark Brown for text on Saffron */
-    --secondary: 30 100% 95%; /* Very light Saffron for subtle backgrounds */
-    --secondary-foreground: 30 80% 40%; /* Darker Saffron for text on light Saffron */
-    --muted: 0 0% 96.1%; /* Light gray for muted text/elements */
-    --muted-foreground: 0 0% 45.1%; /* Medium gray for muted text */
-    --accent: 51 100% 50%; /* Gold #FFD700 */
-    --accent-foreground: 51 100% 10%; /* Dark Brown for text on Gold */
+    --foreground: 210 20% 25%; /* Dark Blue-Gray for text */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 210 20% 25%;
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 210 20% 25%;
+
+    --primary: 205 100% 65%; /* Light Baby Blue */
+    --primary-foreground: 210 100% 10%; /* Dark Blue for text on primary */
+
+    --secondary: 205 100% 95%; /* Very Light Baby Blue */
+    --secondary-foreground: 205 100% 40%; /* Medium Blue for text on secondary */
+
+    --muted: 0 0% 96.1%; /* Light Gray for muted elements */
+    --muted-foreground: 0 0% 45.1%; /* Medium Gray for muted text */
+
+    --accent: 215 90% 55%; /* Slightly Deeper Blue for accents */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 30% 88%; /* Light Saffron/Orange border */
-    --input: 30 30% 94%; /* Light Saffron/Orange input background */
-    --ring: 30 100% 60%; /* Saffron for focus rings */
+
+    --border: 205 50% 88%; /* Light Blue border */
+    --input: 205 50% 94%; /* Light Blue input background */
+    --ring: 205 100% 65%; /* Light Baby Blue for focus rings */
+
     --radius: 0.5rem;
 
-    --chart-1: 30 100% 60%;
-    --chart-2: 51 100% 50%;
-    --chart-3: 20 80% 50%;
-    --chart-4: 40 90% 55%;
-    --chart-5: 15 70% 65%;
+    --chart-1: 205 100% 65%; /* Light Baby Blue */
+    --chart-2: 215 90% 55%; /* Deeper Blue */
+    --chart-3: 200 80% 70%; /* Another shade of light blue */
+    --chart-4: 220 100% 60%; /* Bright Blue */
+    --chart-5: 210 70% 75%; /* Soft Blue */
 
-    --sidebar-background: 30 100% 98%; /* Very Light Saffron */
-    --sidebar-foreground: 20 14.3% 20%; /* Dark text */
-    --sidebar-primary: 30 100% 60%; /* Saffron */
-    --sidebar-primary-foreground: 30 80% 15%; /* Dark text on Saffron */
-    --sidebar-accent: 30 100% 90%; /* Lighter Saffron */
-    --sidebar-accent-foreground: 30 80% 30%; /* Darker Saffron text */
-    --sidebar-border: 30 30% 85%;
-    --sidebar-ring: 30 100% 60%;
+    --sidebar-background: 205 100% 98%; /* Very Light Baby Blue */
+    --sidebar-foreground: 210 20% 25%; /* Dark Blue-Gray text */
+    --sidebar-primary: 205 100% 65%; /* Light Baby Blue */
+    --sidebar-primary-foreground: 210 100% 10%; /* Dark Blue text on primary */
+    --sidebar-accent: 205 100% 90%; /* Lighter Baby Blue */
+    --sidebar-accent-foreground: 205 100% 30%; /* Darker Blue text */
+    --sidebar-border: 205 50% 85%;
+    --sidebar-ring: 205 100% 65%;
   }
 
   .dark {
-    --background: 20 14.3% 10%; /* Dark Brown */
-    --foreground: 0 0% 95%; /* Light text */
-    --card: 20 14.3% 12%;
-    --card-foreground: 0 0% 95%;
-    --popover: 20 14.3% 10%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 30 100% 60%; /* Saffron */
-    --primary-foreground: 30 80% 15%; /* Dark text on Saffron */
-    --secondary: 30 100% 20%; /* Dark Saffron shade */
-    --secondary-foreground: 30 100% 85%; /* Lighter Saffron text */
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 51 100% 50%; /* Gold */
-    --accent-foreground: 51 100% 10%; /* Dark text on Gold */
-    --destructive: 0 70% 40%;
+    --background: 210 30% 10%; /* Very Dark Blue */
+    --foreground: 205 100% 95%; /* Very Light Baby Blue text */
+
+    --card: 210 30% 12%; /* Slightly Lighter Dark Blue */
+    --card-foreground: 205 100% 95%;
+
+    --popover: 210 30% 10%;
+    --popover-foreground: 205 100% 95%;
+
+    --primary: 205 90% 60%; /* Light Baby Blue (slightly adjusted for dark mode) */
+    --primary-foreground: 210 100% 15%; /* Darker Blue text on primary */
+
+    --secondary: 210 30% 20%; /* Darker Blue shade for secondary */
+    --secondary-foreground: 205 90% 85%; /* Lighter Blue text */
+
+    --muted: 210 30% 15%; /* Dark Muted Blue */
+    --muted-foreground: 205 50% 65%; /* Lighter Muted Blue text */
+
+    --accent: 215 80% 50%; /* Deeper Blue for accents (adjusted for dark mode) */
+    --accent-foreground: 205 100% 95%; /* Very Light Blue text on accent */
+
+    --destructive: 0 70% 50%; /* Dark mode destructive */
     --destructive-foreground: 0 0% 95%;
-    --border: 30 100% 30%; /* Darker Saffron border */
-    --input: 30 100% 25%; /* Dark Saffron input background */
-    --ring: 30 100% 60%; /* Saffron for focus rings */
 
-    --chart-1: 30 100% 70%;
-    --chart-2: 51 100% 60%;
-    --chart-3: 20 80% 60%;
-    --chart-4: 40 90% 65%;
-    --chart-5: 15 70% 75%;
+    --border: 210 30% 30%; /* Dark Blue border */
+    --input: 210 30% 25%; /* Dark Blue input background */
+    --ring: 205 90% 60%; /* Light Baby Blue for focus rings */
 
-    --sidebar-background: 20 14.3% 12%; /* Darker Brown */
-    --sidebar-foreground: 0 0% 90%; /* Light text */
-    --sidebar-primary: 30 100% 60%; /* Saffron */
-    --sidebar-primary-foreground: 30 80% 15%; /* Dark text on Saffron */
-    --sidebar-accent: 30 100% 25%; /* Dark Saffron */
-    --sidebar-accent-foreground: 30 100% 80%; /* Lighter Saffron text */
-    --sidebar-border: 30 100% 30%;
-    --sidebar-ring: 30 100% 60%;
+    --chart-1: 205 90% 70%;
+    --chart-2: 215 80% 60%;
+    --chart-3: 200 70% 70%;
+    --chart-4: 220 90% 65%;
+    --chart-5: 210 60% 75%;
+
+    --sidebar-background: 210 30% 12%; /* Darker Blue for sidebar */
+    --sidebar-foreground: 205 100% 90%; /* Light text */
+    --sidebar-primary: 205 90% 60%; /* Light Baby Blue */
+    --sidebar-primary-foreground: 210 100% 15%; /* Dark text on primary */
+    --sidebar-accent: 210 30% 25%; /* Dark Blue */
+    --sidebar-accent-foreground: 205 90% 80%; /* Lighter Blue text */
+    --sidebar-border: 210 30% 30%;
+    --sidebar-ring: 205 90% 60%;
   }
 }
 
