@@ -82,7 +82,7 @@ export default function MaintenanceContributionPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <Card className="max-w-2xl mx-auto shadow-lg">
+      <Card className="max-w-2xl mx-auto shadow-lg animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out">
         <CardHeader>
           <CardTitle className="flex items-center text-2xl text-primary">
             <Wrench className="mr-2 h-7 w-7" />

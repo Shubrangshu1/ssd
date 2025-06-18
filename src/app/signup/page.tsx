@@ -85,7 +85,7 @@ export default function SignupPage() {
 
   return (
     <div className="container mx-auto px-4 py-12 flex justify-center items-center min-h-[calc(100vh-10rem)]">
-      <Card className="w-full max-w-md shadow-xl">
+      <Card className="w-full max-w-md shadow-xl animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out">
         <CardHeader className="text-center">
           <UserPlus className="mx-auto h-10 w-10 text-primary mb-2" />
           <CardTitle className="text-3xl font-bold">Join Satsang Seva</CardTitle>

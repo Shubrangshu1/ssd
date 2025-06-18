@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function IstabritiPage() {
   return (
     <div className="container mx-auto px-4 py-12">
-      <Card className="max-w-3xl mx-auto shadow-lg">
+      <Card className="max-w-3xl mx-auto shadow-lg animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out">
         <CardHeader className="text-center">
           <ScrollText className="mx-auto h-12 w-12 text-primary mb-3" />
           <CardTitle className="text-3xl font-bold text-primary">Istabriti Submission Guidelines</CardTitle>

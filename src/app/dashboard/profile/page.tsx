@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm, type SubmitHandler } from 'react-hook-form';
@@ -88,7 +89,7 @@ export default function ProfilePage() {
   const canEditPhone = user.role !== 'volunteer';
 
   return (
-    <Card className="max-w-2xl mx-auto shadow-lg">
+    <Card className="max-w-2xl mx-auto shadow-lg animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out">
       <CardHeader>
         <CardTitle className="flex items-center text-2xl text-primary">
           <UserCircle className="mr-2 h-7 w-7" />

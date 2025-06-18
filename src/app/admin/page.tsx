@@ -1,6 +1,7 @@
+
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -58,7 +59,7 @@ export default function AdminPage() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <Card className="max-w-2xl mx-auto shadow-xl">
+      <Card className="max-w-2xl mx-auto shadow-xl animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out">
         <CardHeader className="text-center">
           <ShieldAlert className="mx-auto h-12 w-12 text-primary mb-3" />
           <CardTitle className="text-3xl font-bold">Admin Broadcast Panel</CardTitle>
