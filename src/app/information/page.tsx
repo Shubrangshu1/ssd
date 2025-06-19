@@ -111,7 +111,7 @@ export default function InformationPage() {
                 height={400}
                 className="object-cover opacity-30"
                 data-ai-hint="map preview"
-                priority 
+                 
               />
               <Button asChild size="lg" className="absolute">
                 <Link href={MANDIR_MAP_EMBED_URL} target="_blank" rel="noopener noreferrer">
