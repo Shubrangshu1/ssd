@@ -4,8 +4,6 @@
 ]);
 (globalThis.TURBOPACK_CHUNK_LISTS = globalThis.TURBOPACK_CHUNK_LISTS || []).push({
   "path": "static/chunks/src_app_information_page_tsx_a881b8cf._.js",
-  "chunks": [
-    "static/chunks/_02ca5eab._.js"
-  ],
+  "chunks": [],
   "source": "dynamic"
 });
