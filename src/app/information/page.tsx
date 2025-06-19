@@ -1,30 +1,20 @@
 
-"use client";
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { CalendarDays, Clock, MapPin, Youtube, Facebook, Link as LinkIcon, Instagram, Send, Info } from 'lucide-react';
-import { APP_NAME, MANDIR_NAME, MANDIR_ADDRESS, MANDIR_MAP_EMBED_URL, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, getDynamicPrayerTimes, PRAYER_TIMINGS_DEFAULT } from '@/lib/constants';
-// import type { Metadata } from 'next'; // Metadata should be defined statically or fetched in a server component
+import { APP_NAME, MANDIR_NAME, MANDIR_ADDRESS, MANDIR_MAP_EMBED_URL, SOCIAL_LINKS, IMPORTANT_DATES_EVENTS, getDynamicPrayerTimes } from '@/lib/constants';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import type { PrayerTime } from '@/types';
 
-// export const metadata: Metadata = { // Metadata should be defined statically or fetched in a server component
-//   title: 'Mandir Information',
-//   description: `Find all important information about ${MANDIR_NAME}, including events, timings, location, and contact details.`,
-// };
+export const metadata: Metadata = { 
+  title: 'Mandir Information',
+  description: `Find all important information about ${MANDIR_NAME}, including events, timings, location, and contact details.`,
+};
 
 export default function InformationPage() {
-  const [prayerTimesList, setPrayerTimesList] = useState<PrayerTime[]>(PRAYER_TIMINGS_DEFAULT);
-
-  useEffect(() => {
-    // Ensure metadata is handled if this page becomes fully client-rendered for dynamic parts
-    // For now, title can be set in layout or a parent server component if needed.
-    document.title = `Mandir Information | ${APP_NAME}`;
-    setPrayerTimesList(getDynamicPrayerTimes());
-  }, []);
+  const prayerTimesList: PrayerTime[] = getDynamicPrayerTimes();
 
   return (
     <div className="container mx-auto px-4 py-8">

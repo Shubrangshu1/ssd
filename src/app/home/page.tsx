@@ -1,23 +1,16 @@
 
-"use client";
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { CalendarDays, Clock, MapPin, Info, Megaphone, ArrowRight, HeartHandshake } from 'lucide-react';
-import { MANDIR_NAME, MANDIR_ADDRESS, IMPORTANT_DATES_EVENTS, APP_NAME, getDynamicPrayerTimes, PRAYER_TIMINGS_DEFAULT } from '@/lib/constants';
+import { MANDIR_NAME, MANDIR_ADDRESS, IMPORTANT_DATES_EVENTS, APP_NAME, getDynamicPrayerTimes } from '@/lib/constants';
 import type { PrayerTime } from '@/types';
-import { useEffect, useState } from 'react';
 import MahotsavBanner from '@/components/home/MahotsavBanner';
 import StaticInfoSections from '@/components/home/StaticInfoSections';
 
 export default function HomePage() {
-  const [prayerTimes, setPrayerTimes] = useState<PrayerTime[]>(PRAYER_TIMINGS_DEFAULT);
-
-  useEffect(() => {
-    setPrayerTimes(getDynamicPrayerTimes());
-  }, []);
+  const prayerTimes: PrayerTime[] = getDynamicPrayerTimes();
 
   return (
     <div className="container mx-auto px-4 py-8">

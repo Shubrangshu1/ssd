@@ -1,4 +1,6 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/donations/maintenance/page": "app/donations/maintenance/page.js",
   "/donations/satsang-sponsorship/page": "app/donations/satsang-sponsorship/page.js",
   "/donations/thakur-bhog/page": "app/donations/thakur-bhog/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
