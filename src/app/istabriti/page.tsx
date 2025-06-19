@@ -1,5 +1,6 @@
 
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollText, AlertTriangle, Building, Globe, Users } from 'lucide-react';
 import Link from 'next/link';
@@ -22,6 +23,16 @@ export default function IstabritiPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-8 text-lg">
+          <div className="my-6 flex justify-center">
+            <Image
+              src="https://placehold.co/600x300.png"
+              alt="Istabriti Guidelines Visual"
+              width={600}
+              height={300}
+              className="rounded-md shadow-md"
+              data-ai-hint="official document guidelines"
+            />
+          </div>
           <div>
             <h3 className="flex items-center text-xl font-semibold text-primary mb-2">
               <Building className="mr-2 h-6 w-6" />
