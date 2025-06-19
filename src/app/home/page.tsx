@@ -21,7 +21,7 @@ export default function HomePage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <section className="text-center mb-12 animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out">
+      <section className="text-center mb-12 animate-bounce-in-from-bottom">
         <h1 className="text-3xl md:text-4xl font-bold text-primary mb-2">{APP_NAME}</h1>
         <p className="text-lg md:text-xl text-muted-foreground mb-6">
           Your companion for devotion and service at {MANDIR_NAME}.
@@ -43,7 +43,7 @@ export default function HomePage() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <MahotsavBanner />
 
-        <Card className="lg:col-span-1 animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-200">
+        <Card className="lg:col-span-1 animate-bounce-in-from-bottom delay-200">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Megaphone className="h-6 w-6 text-primary" />
@@ -61,7 +61,7 @@ export default function HomePage() {
           </CardFooter>
         </Card>
 
-        <Card className="lg:col-span-1 animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-300">
+        <Card className="lg:col-span-1 animate-bounce-in-from-bottom delay-300">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <CalendarDays className="h-6 w-6 text-primary" />
@@ -87,7 +87,7 @@ export default function HomePage() {
           </CardFooter>
         </Card>
 
-        <Card className="animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-400">
+        <Card className="animate-bounce-in-from-bottom delay-400">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Clock className="h-6 w-6 text-primary" />
@@ -114,7 +114,7 @@ export default function HomePage() {
           </CardFooter>
         </Card>
 
-        <Card className="animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-500">
+        <Card className="animate-bounce-in-from-bottom delay-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <MapPin className="h-6 w-6 text-primary" />

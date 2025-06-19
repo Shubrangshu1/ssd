@@ -8,7 +8,7 @@ import { SOCIAL_LINKS } from '@/lib/constants';
 export default function StaticInfoSections() {
   return (
     <>
-      <Card className="md:col-span-2 lg:col-span-3 animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-600">
+      <Card className="md:col-span-2 lg:col-span-3 animate-bounce-in-from-bottom delay-600">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Users className="h-6 w-6 text-primary" />
@@ -34,7 +34,7 @@ export default function StaticInfoSections() {
         </CardContent>
       </Card>
 
-      <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-primary/10 to-accent/10 animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-700">
+      <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-primary/10 to-accent/10 animate-bounce-in-from-bottom delay-700">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-primary">
             <HeartHandshake className="h-7 w-7" />

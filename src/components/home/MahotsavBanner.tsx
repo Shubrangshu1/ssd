@@ -5,7 +5,7 @@ import { CalendarDays, MapPin } from 'lucide-react';
 
 export default function MahotsavBanner() {
   return (
-    <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-accent/20 to-primary/20 p-4 shadow-xl animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-100">
+    <Card className="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-accent/20 to-primary/20 p-4 shadow-xl animate-bounce-in-from-bottom delay-100">
       <CardHeader className="text-center pb-2">
         <p className="text-xs sm:text-sm text-primary font-semibold">BY THE BLESSINGS OF PARAM PUJYAPAD SREE SREE ACHARYADEV</p>
         <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary filter drop-shadow-lg my-2">KRUPA-SARJANEE MAHOTSAV</CardTitle>

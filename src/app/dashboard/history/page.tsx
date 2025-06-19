@@ -66,7 +66,7 @@ export default function ContributionHistoryPage() {
   }
 
   return (
-    <Card className="shadow-lg animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out">
+    <Card className="shadow-lg animate-bounce-in-from-bottom">
       <CardHeader>
         <CardTitle className="flex items-center text-2xl text-primary">
           <HistoryIcon className="mr-2 h-7 w-7" />

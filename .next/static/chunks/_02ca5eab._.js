@@ -465,8 +465,7 @@ function InformationPage() {
                                                 width: 600,
                                                 height: 400,
                                                 className: "object-cover opacity-30",
-                                                "data-ai-hint": "map preview",
-                                                priority: true
+                                                "data-ai-hint": "map preview"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/information/page.tsx",
                                                 lineNumber: 107,

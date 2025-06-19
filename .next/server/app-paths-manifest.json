@@ -1,7 +1,10 @@
 {
+  "/donations/satsang-sponsorship/page": "app/donations/satsang-sponsorship/page.js",
   "/donations/thakur-bhog/page": "app/donations/thakur-bhog/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/home/page": "app/home/page.js",
   "/information/page": "app/information/page.js",
+  "/istabriti/page": "app/istabriti/page.js",
+  "/login/page": "app/login/page.js",
   "/page": "app/page.js"
 }

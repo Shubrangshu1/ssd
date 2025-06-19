@@ -28,14 +28,14 @@ export default function InformationPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <header className="mb-12 text-center animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out">
+      <header className="mb-12 text-center animate-bounce-in-from-bottom">
         <Info className="mx-auto h-16 w-16 text-primary mb-4" />
         <h1 className="text-4xl font-bold text-primary">{MANDIR_NAME} - Information Hub</h1>
         <p className="text-xl text-muted-foreground mt-2">Stay informed about all activities and details.</p>
       </header>
 
       <div className="space-y-10">
-        <Card className="shadow-lg animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-100" id="events">
+        <Card className="shadow-lg animate-bounce-in-from-bottom delay-100" id="events">
           <CardHeader>
             <CardTitle className="flex items-center text-2xl">
               <CalendarDays className="h-7 w-7 text-primary mr-3" />
@@ -60,7 +60,7 @@ export default function InformationPage() {
           </CardContent>
         </Card>
 
-        <Card className="shadow-lg animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-200" id="timings">
+        <Card className="shadow-lg animate-bounce-in-from-bottom delay-200" id="timings">
           <CardHeader>
             <CardTitle className="flex items-center text-2xl">
               <Clock className="h-7 w-7 text-primary mr-3" />
@@ -94,7 +94,7 @@ export default function InformationPage() {
           </CardContent>
         </Card>
 
-        <Card className="shadow-lg animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-300" id="location">
+        <Card className="shadow-lg animate-bounce-in-from-bottom delay-300" id="location">
           <CardHeader>
             <CardTitle className="flex items-center text-2xl">
               <MapPin className="h-7 w-7 text-primary mr-3" />
@@ -126,7 +126,7 @@ export default function InformationPage() {
           </CardContent>
         </Card>
 
-        <Card className="shadow-lg animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out delay-400" id="connect">
+        <Card className="shadow-lg animate-bounce-in-from-bottom delay-400" id="connect">
           <CardHeader>
             <CardTitle className="flex items-center text-2xl">
               <LinkIcon className="h-7 w-7 text-primary mr-3" />

@@ -129,7 +129,7 @@ export default function SatsangSponsorshipPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <Card className="max-w-2xl mx-auto shadow-lg animate-in fade-in slide-in-from-bottom-10 duration-500 ease-out">
+      <Card className="max-w-2xl mx-auto shadow-lg animate-bounce-in-from-bottom">
         <CardHeader>
           <CardTitle className="flex items-center text-2xl text-primary">
             <Sprout className="mr-2 h-7 w-7" />

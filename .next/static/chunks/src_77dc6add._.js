@@ -1219,8 +1219,7 @@ function HomePage() {
                                             width: 600,
                                             height: 400,
                                             className: "object-cover aspect-video w-full rounded-md group-hover:scale-105 transition-transform duration-300 ease-in-out",
-                                            "data-ai-hint": "temple aerial map",
-                                            priority: true
+                                            "data-ai-hint": "temple aerial map"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/home/page.tsx",
                                             lineNumber: 127,
